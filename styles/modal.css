@@ -1,0 +1,58 @@
+.modal h3 {
+    margin: 15px 0;
+  }
+  
+.modal .overlay {
+    background: #000;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    opacity: 0.7;
+  }
+  
+.modal .visible {
+    background: #fff;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-top: -200px;
+    overflow: hidden;
+    z-index: 2000;
+    width: 400px;
+    padding: 10px 30px;
+    margin-left: -230px;
+    border: 1px solid #000;
+  }
+  
+.modal .controls {
+    float: right;
+    padding-top: 5px;
+    padding-bottom: 10px;
+  }
+  
+.modal .controls button {
+    display: inline-block;
+    margin-left: 15px;
+  }
+  
+.modal .description {
+    height: 150px;
+    resize: none;
+  }
+  
+.modal .modalItem {
+    display: block;
+    box-sizing: border-box;
+    font-size: 16px;
+    padding: 5px 10px;
+    width: 100%;
+    margin: 15px 0px;
+    border: 1px solid #000;
+}
+
+.modal .titleModal {
+    padding: 8px;
+}

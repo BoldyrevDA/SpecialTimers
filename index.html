@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Timers</title>
+    <link rel="stylesheet" href="styles/other.css">
+    <link rel="stylesheet" href="styles/tabular.css">
+    <link rel="stylesheet" href="styles/modal.css">
+</head>
+<body>
+    <table id="timers_01" class="table">
+        <caption>PS4 [1]</caption>
+        <thead>
+            <tr>
+                <th>Имя</th>
+                <th>Дата</th>
+                <th>Время начала</th>
+                <th>Время конца</th>
+                <th>Оставшееся время</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="5"><button class="btn">Добавить</button></td>
+            </tr>
+        </tbody>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <div id="modal" class="modal hidden">
+        <div class="overlay"></div>
+        <div class="visible">
+          <h3>Добавить таймер</h3>
+          <input
+            type="text"
+            id="modalText"
+            class="modalItem titleModal"
+            placeholder="Введите имя"
+            name="title"
+          />
+          <input class="modalItem" type="datetime-local" id="modalDate" value="">
+          <input class="modalItem" type="time" id="modalTime">
+
+          <div class="controls">
+            <button class="btn" id="modalAddingBtn">
+              Добавить
+            </button>
+            <button class="btn" onclick="document.getElementById('modal').classList.add('hidden')">
+              Закрыть
+            </button>
+          </div>
+        </div>
+      </div>
+      <script src="scripts/script.js"></script>
+</body>
+</html>
