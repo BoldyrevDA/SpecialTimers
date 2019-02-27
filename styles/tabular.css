@@ -1,4 +1,6 @@
 .tableWrapper {
+    display: flex;
+    flex-wrap: wrap;
     
 }
 
@@ -8,10 +10,12 @@
     border-radius: 10px;
     border-spacing: 0;
     text-align: center;
-    display: inline-block;
-    width: 48%;
     overflow: auto;
     margin: 5px;
+    vertical-align: top;
+
+    flex: 1 1 auto;
+    flex-basis: 650px;
 }
 
 caption {
