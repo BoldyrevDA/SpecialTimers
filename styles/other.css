@@ -1,5 +1,5 @@
 .btn {
-    background-color: #e5e5e5;
+    background-color: #BDD;
     border: solid 1px #000;
     color: #000;
     padding: 3px 25px;
@@ -9,8 +9,13 @@
     border-radius: 3px;
 }
 
+.btn-delete {
+    padding: 2px 7px;
+    font-size: 16px;
+}
+
 .btn:hover {
-    background-color: #bbb;
+    background-color: #9AF;
     cursor: pointer;
 }
 

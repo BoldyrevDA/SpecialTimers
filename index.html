@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,59 +10,70 @@
     <link rel="stylesheet" href="styles/tabular.css">
     <link rel="stylesheet" href="styles/modal.css">
 </head>
-<body>
-    <table id="timers_01" class="table">
-        <caption>PS4 [1]</caption>
-        <thead>
-            <tr>
-                <th>Имя</th>
-                <th>Дата</th>
-                <th>Время начала</th>
-                <th>Время конца</th>
-                <th>Оставшееся время</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td colspan="5"><button class="btn">Добавить</button></td>
-            </tr>
-        </tbody>
-        <tbody>
 
-        </tbody>
-    </table>
+<body>
+    <div class="tableWrapper">
+        <table id="timers_01" class="table">
+            <caption>PS4 [1]</caption>
+            <thead>
+                <tr>
+                    <th>Имя</th>
+                    <th>Дата</th>
+                    <th>Время начала</th>
+                    <th>Время конца</th>
+                    <th>Оставшееся время</th>
+                    <th>Удалить</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="6"><button class="btn addingBtn" data-action="addRow">Добавить</button></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <table id="timers_02" class="table">
+            <caption>PS4 [2]</caption>
+            <thead>
+                <tr>
+                    <th>Имя</th>
+                    <th>Дата</th>
+                    <th>Время начала</th>
+                    <th>Время конца</th>
+                    <th>Оставшееся время</th>
+                    <th>Удалить</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="6"><button class="btn addingBtn" data-action="addRow">Добавить</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
     <div id="modal" class="modal hidden">
         <div class="overlay"></div>
         <div class="visible">
-          <h3>Добавить таймер</h3>
-          <input
-            type="text"
-            id="modalText"
-            class="modalItem titleModal"
-            placeholder="Введите имя"
-            name="title"
-          />
-          <input class="modalItem" type="datetime-local" id="modalDate" value="">
-          <input class="modalItem" type="time" id="modalTime">
+            <h3>Добавить таймер</h3>
+            <input type="text" id="modalText" class="modalItem titleModal" placeholder="Введите имя" name="title" />
+            <label for="modalDate">Время начала:</label>
+            <input class="modalItem" type="datetime-local" id="modalDate" value="">
+            <label for="modalTime">Время на игру:</label>
+            <input class="modalItem" type="time" id="modalTime">
 
-          <div class="controls">
-            <button class="btn" id="modalAddingBtn">
-              Добавить
-            </button>
-            <button class="btn" onclick="document.getElementById('modal').classList.add('hidden')">
-              Закрыть
-            </button>
-          </div>
+            <div class="controls">
+                <button class="btn" id="modalAddingBtn">
+                    Добавить
+                </button>
+                <button class="btn" onclick="document.getElementById('modal').classList.add('hidden')">
+                    Закрыть
+                </button>
+            </div>
         </div>
-      </div>
-      <script src="scripts/script.js"></script>
+    </div>
+    <script src="scripts/timerTableScript.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
+
 </html>

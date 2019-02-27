@@ -49,9 +49,11 @@
     font-size: 16px;
     padding: 5px 10px;
     width: 100%;
-    margin: 15px 0px;
+    margin-top: 5px;
+    margin-bottom: 15px;
     border: 1px solid #000;
 }
+
 
 .modal .titleModal {
     padding: 8px;

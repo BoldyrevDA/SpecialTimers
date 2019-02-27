@@ -1,9 +1,17 @@
+.tableWrapper {
+    
+}
+
 .table {
     font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
     font-size: 14px;
     border-radius: 10px;
     border-spacing: 0;
     text-align: center;
+    display: inline-block;
+    width: 48%;
+    overflow: auto;
+    margin: 5px;
 }
 
 caption {
