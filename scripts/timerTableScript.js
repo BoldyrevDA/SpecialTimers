@@ -9,6 +9,7 @@ timersTable.onclick = function(event) {
     var target = event.target;
 
     if(target.dataset.action == "addRow") {
+        
         doAddingBtnAction(event);
     }
 
@@ -74,7 +75,7 @@ function createAndAddRow(elem, e){
     if (time) {
         finishDate.setHours(finishDate.getHours() + (+time.slice(0,2)));
         finishDate.setMinutes(finishDate.getMinutes() + (+time.slice(3)));
-        finishDate.setSeconds(new Date().getSeconds());
+        //finishDate.setSeconds(new Date().getSeconds());
     }
 
     let rowItem = {
