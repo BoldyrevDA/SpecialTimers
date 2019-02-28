@@ -103,7 +103,7 @@ function createTableRowHTML (item) {
     result += item.endDate.toLocaleTimeString("ru", timeOptions) + "</td><td>";
     let differenceDate = (item.endDate - item.beginDate) / 1000 / 60;
     let cost = Math.round(differenceDate * MINUTE_COST)
-    result += item.gameTime + " / " + cost +" руб</td>";
+    result += item.gameTime + " / " + cost +" р.</td>";
 
     result += "<td class = \"timer\">--:--:--</td><td><button class=\"btn btn-delete\" data-action=\"deleteRow\">x</button></td></tr>";
     return result;
