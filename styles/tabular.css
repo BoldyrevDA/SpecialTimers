@@ -6,7 +6,7 @@
 
 .table {
     font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-    font-size: 14px;
+    font-size: 13px;
     border-radius: 10px;
     border-spacing: 0;
     text-align: center;
@@ -16,6 +16,7 @@
 
     flex: 1 1 auto;
     flex-basis: 650px;
+    table-layout: fixed;
 }
 
 caption {
@@ -32,7 +33,7 @@ th {
     background: #BCEBDD;
     color: white;
     text-shadow: 0 1px 1px #2D2020;
-    padding: 10px 20px;
+    padding: 8px 8px;
 }
 
 th, td {
@@ -54,6 +55,11 @@ td {
     padding: 10px 20px;
     background: #F8E391;
 }
+
+tr :first-child {
+    word-break: break-all;
+}
+
 
 tr:last-child td:first-child {
     border-radius: 0 0 0 10px;

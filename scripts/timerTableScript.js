@@ -1,5 +1,6 @@
 function addTimersTableAction(timersTable) {
-const hourOffset = 4;
+const HOUR_OFFSET = 4;
+const MINUTE_COST = 1.6667;
 let timeOptions = {
     timeZone: "UTC"
 }
@@ -42,7 +43,7 @@ function doAddingBtnAction (e) {
     let nowDate = new Date();
     let modalBtn = document.getElementById("modalAddingBtn");
 
-    nowDate.setHours(nowDate.getHours() + hourOffset);
+    nowDate.setHours(nowDate.getHours() + HOUR_OFFSET);
     dateEl.value = nowDate.toISOString().slice(0, -8);
     document.getElementById("modal").classList.remove("hidden");
 
@@ -79,7 +80,8 @@ function createAndAddRow(elem, e){
     let rowItem = {
         name: nameEl.value,
         beginDate: startDate,
-        endDate: finishDate
+        endDate: finishDate,
+        gameTime: time
     }
 
     addRow(elem, rowItem);
@@ -97,7 +99,10 @@ function createTableRowHTML (item) {
     let result = "<tr><td>" + item.name + "</td><td>";
     result += formatDate(item.beginDate) + "</td><td>";
     result += item.beginDate.toLocaleTimeString("ru", timeOptions) + "</td><td>";
-    result += item.endDate.toLocaleTimeString("ru", timeOptions) + "</td>";
+    result += item.endDate.toLocaleTimeString("ru", timeOptions) + "</td><td>";
+    let differenceDate = (item.endDate - item.beginDate) / 1000 / 60;
+    let cost = Math.round(differenceDate * MINUTE_COST)
+    result += item.gameTime + " / " + cost +" руб</td>";
 
     result += "<td class = \"timer\">--:--:--</td><td><button class=\"btn btn-delete\" data-action=\"deleteRow\">x</button></td></tr>";
     return result;
@@ -107,7 +112,7 @@ function addTimerInElem(elem, startDate, endDate)
 {
     let timerId = setTimeout(function go() {
         let nowDate = new Date();
-        nowDate.setHours(nowDate.getHours() + hourOffset);
+        nowDate.setHours(nowDate.getHours() + HOUR_OFFSET);
         if (startDate > nowDate) {
             setTimeout(go, 2000);
         }
