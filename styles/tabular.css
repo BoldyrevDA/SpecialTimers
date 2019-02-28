@@ -17,6 +17,8 @@
     flex: 1 1 auto;
     flex-basis: 650px;
     table-layout: fixed;
+
+    box-shadow: 0px 2px 25px 3px #BCEBDD;
 }
 
 caption {
@@ -26,7 +28,7 @@ caption {
     padding-bottom: 10px;
     margin-bottom: -5px;
     font-size: 20px;
-    background: radial-gradient(at bottom, #BCEBDD, #FFF);
+    background: radial-gradient(at bottom, #BCEBDD, transparent);
 }
 
 th {
@@ -39,7 +41,7 @@ th {
 th, td {
     border-style: solid;
     border-width: 0 1px 1px 0;
-    border-color: white;
+    border-color: black;
 }
 
 th:first-child {
@@ -75,4 +77,9 @@ tr td:last-child {
 
 .table button {
     margin: auto;
+}
+
+.timer {
+    font-size: 14px;
+    font-weight: 600;
 }
